@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <custom-input name="비번"></custom-input>
+        <custom-input name="이메일"></custom-input>
+
+        <script>
+            // Web Components : js문법으로 구현할 수 있는 브라우저 기본 기능
+            // 웹 개발을 잘하고 싶으면 브라우저 기능을 잘 알아야 함, js문법은 도구일 뿐
+
+            class 클래스 extends HTMLElement {
+                connectedCallback() {
+                    // 내가 만든 태그가 HTML에 장착이 될 때 실행할 코드를 적는 곳
+                    let name = this.getAttribute("name")
+                    this.innerHTML = `<label>${name} 인풋이에요</label><input>`;
+                    // this : 새로 생성될 <custom-input>요소
+                }
+            }
+
+            customElements.define("custom-input", 클래스);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        async function 더하기() {
+             return 1+1;
+        }
+        더하기().then((결과) => {
+            console.log(결과)
+        })
+
+        async function 더하기2() {
+           var 프로미스 = new Promise(function(성공, 실패){
+            var 힘든연산 = 1+1;
+            성공(100);
+            실패( 100)
+           });
+           try {
+            var 결과 = await 프로미스;
+           console.log(결과)
+           } catch {
+            console.log("프로미스 연산이 잘 안되었군요")
+           }
+           
+        }
+       
+       더하기2()
+       
+    </script>
+</body>
+</html>

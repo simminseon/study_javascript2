@@ -7,8 +7,8 @@ const promise = new Promise((resolve, reject) => {
     // 새로운 promise가 만들어지면 콜백함수가 바로 실행됨
     console.log("doing somthing");
     setTimeout(() => {
-        // resolve("성공!");
-        reject(new Error("에러!"));
+        resolve("성공!");
+        // reject(new Error("에러!"));
     }, [1000]);
 });
 
@@ -51,3 +51,20 @@ getHen() //
     .then((egg) => cook(egg))
     .then((meal) => console.log(meal))
     .catch((error) => console.log(error));
+
+
+let 프로미스 = new Promise(function(성공, 실패){
+    let 어려운연산 = 1+1;
+    // 성공(어려운연산)
+    실패()
+})
+
+프로미스.then((결과) => {
+    console.log(결과)
+}).catch(() => {
+    console.log("실패했어요 ㅜ")
+})
+
+
+
+// promise 는 그냥 콜백함수 디자인의 대체품일 뿐이다.

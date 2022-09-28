@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // Map 자료형
+            // - 자료간의 연관성을 표현하기 위해 사용
+            var person = new Map();
+            person.set([1, 2, 3], "kim");
+            person.set("age", 20);
+
+            // 자료 꺼내기
+            person.get("age");
+
+            // 자료 삭제
+            person.delete("age");
+
+            // 데이터 개수
+            person.size; // 2 출력
+
+            for (var key of person.keys()) {
+                console.log(key);
+            }
+
+            // Set 자료형
+            // - 중복자료를 허용하지 않는 Array 비슷한 것
+            var 출석부 = ["sunny", "sim", "kim", "tom", "sim"];
+            var 출석부2 = new Set(["sunny", "sim", "kim", "tom", "sim"]);
+            console.log(출석부2);
+
+            // 자료 추가
+            출석부2.add("sally");
+            // 자료 제거
+            출석부2.delete("sally");
+            // 자료 있는지 확인 // true/false
+            출석부2.has("sunny");
+            // 데이터 개수
+            출석부2.size;
+
+            // set을 다시 array로 만들기
+            출석부 = [...출석부2];
+            console.log(출석부);
+
+            출석부2.forEach((element) => {
+                console.log(element);
+            });
+        </script>
+    </body>
+</html>
