@@ -1,20 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-    </head>
-    <body>
-        <script>
-            function 글자세기(a) {
-                const test = [...a];
-                const arrtest.filter((data) => data === data);
-                return console.log(test);
-            }
-            글자세기("aacbbb");
-            //{ a : 2, b : 3, c : 1 }
-        </script>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const array1 = ["aya", "yee", "u", "maa", "wyeoo"];
+      const array2 = ["ayaye", "uuuma", "ye", "yemawoo", "ayaa"];
+
+      const words = ["aya", "ye", "woo", "ma"];
+      const all = [];
+      function solution(babbling) {
+        var answer = 0;
+        for (var i = 0; i < babbling.length; i++) {
+          if (
+            babbling[i]
+              .replace("ye", " ")
+              .replace("aya", " ")
+              .replace("woo", " ")
+              .replace("ma", " ")
+              .trim() == ""
+          ) {
+            answer = answer + 1;
+          }
+        }
+        return answer;
+      }
+      solution(array2);
+
+      //   function allWords(babbling, n, k) {
+      //     if (n === babbling.length - 1) {
+      //       const str = babbling.slice(0, k).join("");
+      //       if (!all.includes(str)) {
+      //         all.push(str);
+      //         return;
+      //       }
+      //     } else {
+      //       for (let i = n; i < babbling.length; i++) {
+      //         let temp = babbling[n];
+      //         babbling[n] = babbling[i];
+      //         babbling[i] = temp;
+
+      //         allWords(babbling, n + 1, k);
+
+      //         babbling[i] = babbling[n];
+      //         babbling[n] = temp;
+      //       }
+      //       return all;
+      //     }
+      //   }
+
+      //   const wordsCase = [...words, ...allWords(words, 0, 2)];
+
+      //   function solution(babbling) {
+      //     const test2 = [];
+      //     const answer = babbling.filter((test, index) => {
+      //       //   return wordsCase.includes(test, 0);
+      //       if (wordsCase.indexOf(test) != -1) {
+      //         test2.push(test);
+      //       }
+      //     });
+      //     console.log("test2:", test2);
+      //     return console.log(answer);
+      //   }
+
+      //   solution(array1);
+      //   solution(array2);
+    </script>
+  </body>
 </html>
