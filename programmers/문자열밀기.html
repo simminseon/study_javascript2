@@ -12,12 +12,26 @@
       const a2 = "ohell";
       const b1 = "apple";
       const b2 = "elppa";
-      function solution(a, b) {
-        var answer = 0;
-        const test = [...a];
 
-        return answer;
-      }
+      // function solution(a, b) {
+      //   var answer = 0;
+      //   const arr = [...a];
+
+      //   for (let i = 0; i < arr.length; i++) {
+      //     if (a === b) {
+      //       return i;
+      //     }
+      //     arr.unshift(arr.pop()); // arr의 첫번째 요소에 arr의 마지막 요소를 추가
+      //     console.log(arr);
+      //     if (arr.join("") === b) return i + 1;
+      //   }
+      //   return -1;
+      //   // console.log(arr);
+      // }
+
+      // b를 두번 반복시킨 후 a의 index 값을 찾음
+      let solution = (a, b) => (b + b).indexOf(a);
+
       console.log(solution(a1, a2));
       console.log(solution(b1, b2));
     </script>
