@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function solution(my_str, n) {
+        const answer = [];
+        for (let i = 0; i < my_str.length; i += n) {
+          answer.push(my_str.substring(i, i + n));
+        }
+        return answer;
+      }
+      console.log(solution("abc1Addfggg4556b", 6));
+
+      // string.substring(시작인덱스, 종료인덱스)
+      // 문자열을 시작 인덱스부터 종료인덱스 "전" 까지의 부분 문자열을 반환
+    </script>
+  </body>
+</html>
