@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const array1 = [7, 77, 17];
+      const array2 = [10, 29];
+      function solution(array) {
+        const test = array.join('').split('');
+        var answer = test.filter((data) => {
+          return data === '7';
+        });
+        return answer.length;
+      }
+      solution(array1);
+      solution(array2);
+    </script>
+  </body>
+</html>
